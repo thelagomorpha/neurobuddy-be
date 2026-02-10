@@ -82,12 +82,6 @@ jobs:
       run: |
         railway up --service ${{ secrets.RAILWAY_PRODUCTION_SERVICE }}
 
-    - name: Run migrations on production
-      env:
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_PRODUCTION_TOKEN }}
-      run: |
-        railway run --service ${{ secrets.RAILWAY_PRODUCTION_SERVICE }} python manage.py migrate
-
     - name: Health check
       run: |
         echo "Waiting for deployment to be ready..."
