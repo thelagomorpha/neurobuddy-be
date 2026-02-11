@@ -73,12 +73,6 @@ jobs:
       run: |
         railway up --service ${{ secrets.RAILWAY_STAGING_SERVICE }}
 
-    - name: Run migrations on staging
-      env:
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_STAGING_TOKEN }}
-      run: |
-        railway run --service ${{ secrets.RAILWAY_STAGING_SERVICE }} python manage.py migrate
-
     - name: Deployment notification
       run: |
         echo "✅ Deployed to Staging successfully!"
