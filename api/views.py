@@ -6,6 +6,17 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 @require_http_methods(["GET"])
+def health_check(request):
+    """
+    Health check endpoint for deployment platforms
+    """
+    return JsonResponse({
+        'status': 'healthy',
+        'service': 'neurobuddy-backend'
+    })
+
+
+@require_http_methods(["GET"])
 def hello_world(request):
     """
     Simple Hello World endpoint that demonstrates database connectivity
