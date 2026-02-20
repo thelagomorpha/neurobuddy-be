@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.venv
+venv
+db.sqlite3
+staticfiles
+.git
+.gitignore
+railway.json
