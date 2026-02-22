@@ -80,7 +80,7 @@ jobs:
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_PRODUCTION_TOKEN }}
       run: |
-        railway up --service ${{ secrets.RAILWAY_PRODUCTION_SERVICES }}
+        railway up --service ${{ secrets.RAILWAY_PRODUCTION_SERVICE }}
 
     - name: Health check
       run: |
