@@ -71,7 +71,7 @@ jobs:
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_STAGING_TOKEN }}
       run: |
-        railway up --service ${{ secrets.RAILWAY_STAGING_SERVICE }}
+        railway up --service ${{ secrets.RAILWAY_STAGING_SERVICES }}
 
     - name: Deployment notification
       run: |
